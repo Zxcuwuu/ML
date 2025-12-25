@@ -1,202 +1,202 @@
-📧 Spam Email Classification using Machine Learning
-📌 Project Overview
+# 📧 Spam Email Classification using Machine Learning
 
-This project is a machine learning pipeline for spam email detection.
-It performs data preprocessing, text cleaning, visualization, feature extraction, model training, evaluation, comparison, ROC analysis, and cross-validation.
+![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-NLP-green.svg)
+![Status](https://img.shields.io/badge/Status-Completed-success.svg)
 
-The goal is to compare multiple classification models and determine the best one for spam detection based on metrics such as Accuracy, Precision, Recall, F1-score, and ROC-AUC.
+---
 
-🧠 Models Used
+## 📌 Project Overview
 
-The following models are implemented and compared:
+This project implements a **complete Machine Learning & NLP pipeline** for **spam email classification**.
+It covers all stages of a real-world ML workflow — from **raw text preprocessing** to **model evaluation, comparison, and selection**.
 
-Naive Bayes (MultinomialNB)
+The main objective is to **compare multiple classification algorithms** and determine the **best-performing model** using industry-standard metrics.
 
-Logistic Regression
+---
 
-Decision Tree
+## 🧠 Models Implemented
 
-Random Forest
+The following classification models are trained and evaluated:
 
-📂 Dataset Requirements
+* 🟢 **Naive Bayes (MultinomialNB)**
+* 🔵 **Logistic Regression** *(with GridSearchCV)*
+* 🟠 **Decision Tree Classifier** *(with GridSearchCV)*
+* 🔴 **Random Forest Classifier** *(with GridSearchCV)*
 
-The dataset should be a CSV file containing:
+---
 
-A text column (e.g. message, text, email)
+## 📂 Dataset Requirements
 
-A label column (e.g. spam, label, category)
+The dataset must be provided as a **CSV file** with:
 
-Supported label formats:
+* **Text column** (e.g. `message`, `text`, `email`)
+* **Label column** (e.g. `spam`, `label`, `category`)
 
-ham / spam
+### ✅ Supported Label Formats
 
-0 / 1
+| Format  | Example      |
+| ------- | ------------ |
+| Text    | `ham / spam` |
+| Integer | `0 / 1`      |
+| String  | `"0" / "1"`  |
 
-"0" / "1"
+### 📄 Example Dataset
 
-Example:
-
+```csv
 message,spam
 "Congratulations! You won a prize",1
 "Meeting tomorrow at 10am",0
+```
 
-⚙️ Project Structure
+---
 
-The code is organized into logical blocks:
+## ⚙️ Project Workflow
 
-Library Imports & Settings
+The project is structured into clearly defined stages:
 
-Data Loading
+1. 📦 Library Imports & Settings
+2. 📥 Data Loading
+3. 🏷️ Label Processing
+4. 🧹 Text Preparation
+5. ✂️ Text Preprocessing & Lemmatization
+6. 📊 Exploratory Data Analysis (EDA)
+7. ☁️ Word Cloud Analysis
+8. 🔀 Train-Test Split
+9. 🔡 Text Vectorization
+10. 🤖 Model Training
+11. 📈 Model Evaluation
+12. 🔁 Cross-Validation
+13. 🏆 Model Comparison & Selection
+14. 📝 Final Report & Recommendations
 
-Label Processing
+---
 
-Text Preparation
-
-Text Preprocessing (cleaning & lemmatization)
-
-Exploratory Data Analysis & Visualization
-
-Word Cloud Analysis
-
-Train-Test Split
-
-Text Vectorization
-
-Naive Bayes Model
-
-Logistic Regression (GridSearchCV)
-
-Decision Tree (GridSearchCV)
-
-Random Forest (GridSearchCV)
-
-Model Comparison
-
-Confusion Matrices
-
-ROC Curves
-
-Cross-Validation
-
-Final Report & Recommendations
-
-🧹 Text Preprocessing
+## 🧹 Text Preprocessing Pipeline
 
 The text cleaning pipeline includes:
 
-Lowercasing
+* Lowercasing
+* Removing email addresses
+* Removing URLs
+* Removing HTML tags
+* Removing punctuation & digits
+* Stopword removal
+* Lemmatization
+* Token filtering
 
-Removing emails, URLs, HTML tags
+---
 
-Removing punctuation and digits
+## 🔡 Feature Extraction
 
-Stopword removal
+Two vectorization techniques are applied:
 
-Lemmatization
+| Model               | Vectorization                      |
+| ------------------- | ---------------------------------- |
+| Naive Bayes         | **Bag of Words (CountVectorizer)** |
+| Logistic Regression | **TF-IDF**                         |
+| Decision Tree       | **TF-IDF**                         |
+| Random Forest       | **TF-IDF**                         |
 
-Token filtering
+---
 
-🔡 Feature Extraction
-
-Two vectorization techniques are used:
-
-TF-IDF (for Logistic Regression, Decision Tree, Random Forest)
-
-Bag of Words (CountVectorizer) (for Naive Bayes)
-
-📊 Evaluation Metrics
+## 📊 Evaluation Metrics
 
 Each model is evaluated using:
 
-Accuracy
+* Accuracy
+* Precision
+* Recall
+* F1-score
+* ROC-AUC
+* Confusion Matrix
+* ROC Curve
 
-Precision
+---
 
-Recall
+## 📈 Visualizations Generated
 
-F1-score
+The project automatically generates:
 
-ROC-AUC
+* 📊 Class distribution plots
+* 📏 Text length distribution
+* 🧮 Average word count analysis
+* ☁️ Word clouds for spam emails
+* 🧩 Confusion matrices
+* 📈 ROC curves for all models
+* 🏆 Model comparison bar charts
 
-Confusion Matrix
+---
 
-ROC Curve
+## 🔁 Cross-Validation
 
-📈 Visualization
+* **5-Fold Cross-Validation**
+* Accuracy-based evaluation
+* Reported statistics:
 
-The project generates:
+  * Mean Accuracy
+  * Standard Deviation
+  * Minimum Accuracy
+  * Maximum Accuracy
 
-Class distribution plots
+---
 
-Text length distributions
-
-Average word counts
-
-Word clouds for spam messages
-
-Confusion matrices
-
-ROC curves for all models
-
-Model comparison bar charts
-
-🔁 Cross-Validation
-
-5-Fold Cross-Validation
-
-Accuracy-based evaluation
-
-Mean, Standard Deviation, Min & Max accuracy reported
-
-🏆 Model Selection
+## 🏆 Model Selection Criteria
 
 The best model is selected based on:
 
-Highest F1-score
+* ✅ Highest **F1-score**
+* 📈 Strong **ROC-AUC**
+* 🔄 Consistent performance across folds
 
-Overall performance consistency
+---
 
-ROC-AUC score
+## 🛠️ Libraries Used
 
-🛠️ Libraries Used
-
+```bash
 pandas
-
 numpy
-
 matplotlib
-
 seaborn
-
 scikit-learn
-
 nltk
-
 wordcloud
+```
 
-🚀 How to Run
+---
 
-Install dependencies:
+## 🚀 How to Run the Project
 
+### 1️⃣ Install Dependencies
+
+```bash
 pip install pandas numpy matplotlib seaborn scikit-learn nltk wordcloud
+```
 
+### 2️⃣ Dataset Placement
 
-Download NLTK resources (automatically handled in code)
+Update the dataset path in the code:
 
-Place your dataset:
-
+```python
 df = pd.read_csv("/content/emails.csv")
+```
 
+### 3️⃣ Run the Notebook / Script
 
-Run the notebook or script.
+NLTK resources are downloaded automatically during execution.
 
-📌 Conclusion
+---
 
-This project demonstrates a complete NLP + Machine Learning workflow for spam detection, from raw data to model evaluation and comparison.
-It is suitable for:
+## 📌 Conclusion
 
-Academic coursework
+This project demonstrates a **full NLP + Machine Learning workflow** for binary text classification.
 
-NLP practice
+### 🎯 Suitable for:
 
-Binary text classification tasks
+* Academic coursework
+* NLP & ML practice
+* Spam detection systems
+* Binary text classification problems
+
+---
+
