@@ -19,10 +19,10 @@ The main objective is to **compare multiple classification algorithms** and dete
 
 The following classification models are trained and evaluated:
 
-* 🟢 **Naive Bayes (MultinomialNB)**
-* 🔵 **Logistic Regression** *(with GridSearchCV)*
-* 🟠 **Decision Tree Classifier** *(with GridSearchCV)*
-* 🔴 **Random Forest Classifier** *(with GridSearchCV)*
+* 🟢 **Naive Bayes**
+* 🔵 **Logistic Regression**
+* 🟠 **Decision Tree Classifier**
+* 🔴 **Random Forest Classifier**
 
 ---
 
@@ -93,7 +93,7 @@ Two vectorization techniques are applied:
 
 | Model               | Vectorization                      |
 | ------------------- | ---------------------------------- |
-| Naive Bayes         | **Bag of Words (CountVectorizer)** |
+| Naive Bayes         | **Bag of Words** |
 | Logistic Regression | **TF-IDF**                         |
 | Decision Tree       | **TF-IDF**                         |
 | Random Forest       | **TF-IDF**                         |
@@ -193,7 +193,6 @@ This project demonstrates a **full NLP + Machine Learning workflow** for binary 
 
 ### 🎯 Suitable for:
 
-* Academic coursework
 * NLP & ML practice
 * Spam detection systems
 * Binary text classification problems
