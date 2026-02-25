@@ -198,6 +198,6 @@ This project demonstrates a **full NLP + Machine Learning workflow** for binary 
 * Binary text classification problems
 
 ---
-Kungurtsev Nikita
+
 
 
